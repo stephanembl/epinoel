@@ -1,0 +1,16 @@
+html, body				{ height: 100%; }
+body 					{ font-size: 14px; line-height: 21px; color: #333; background: #555555 url(../img/grd_main_gray.png) center top repeat-y; }
+a:focus					{ outline: none; }
+#res 					{ color: #FFF; }
+#res h1					{ font-size: 30px; padding-top: 40px; line-height: 40px; font-weight: bold; }
+#static-snow			{ background: url(../img/snowflakes_static_transparency.png) center top no-repeat; width: 100%; height: 100%; position: absolute; margin-left:0; margin-right:0; left: 0; right: 0; }
+.notshown				{ display: none; }
+.snow					{ height: 100px; background: url(../img/snow.png) left bottom repeat-x; width: 100%; position: fixed; left:0; bottom: 40px; z-index: 20; }
+.snow-panel				{ position: fixed !important; z-index: 1 !important; width: 100%; height: 100%; top: 0; left: 0; }
+.content				{ height: 100%; display:table; }
+.main					{ display: table-cell; padding-top: 140px; position: relative; z-index: 40; }
+.pull-center 			{ text-align: center; }
+.merry					{ background: url(../img/merry_christmas_white.png) no-repeat; background-size: contain; }
+
+
+
