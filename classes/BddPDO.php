@@ -13,10 +13,10 @@ class BddPDO {
 
     private function connect($host, $port, $bdd, $user, $pass){
 		try {
-			$PDO = new PDO('mysql:host='.$host.';port='.$port.';dbname='.$bdd, $user, $pass);
+			$PDO = new PDO('mysql:host='.$host.';port='.$port.';dbname='.$bdd.'', $user, $pass);
 		} catch(Exception $e) {
 			echo 'PDO Erreur : '.$e->getMessage().'<br />';
-			echo 'N° : '.$e->getCode();
+			echo 'Nï¿½ : '.$e->getCode();
 		}
 		return $PDO;
     }
