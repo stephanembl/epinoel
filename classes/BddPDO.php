@@ -13,10 +13,10 @@ class BddPDO {
 
     private function connect($host, $port, $bdd, $user, $pass){
 		try {
-			$PDO = new PDO('mysql:host='.$host.';port='.$port.';dbname='.$bdd.'', $user, $pass);
+			$PDO = new PDO('mysql:host='.$host.';port='.$port.';dbname='.$bdd, $user, $pass);
 		} catch(Exception $e) {
 			echo 'PDO Erreur : '.$e->getMessage().'<br />';
-			echo 'N� : '.$e->getCode();
+			echo 'N°: '.$e->getCode();
 		}
 		return $PDO;
     }
@@ -35,11 +35,7 @@ class BddPDO {
 	
 	public static function updateWinner($search){
 		$res = $PDO->prepare("UPDATE days SET winner=? WHERE date=CURDATE()");
-		try {
-			$success = $res->execute(array($search));
-		} catch(Exception $e) {
-			echo 'Erreur : ', $e->getMessage();
-		}
+		$success = $res->execute(array($search));
 	}
 }
 ?>
